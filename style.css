@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+#boxForCalendar {
+  background-color: rgb(229, 229, 222);
+  opacity: 0.8;
+  position: relative;
+  max-width: 40%;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  max-width: 85%;
+  margin: auto;
+}
+.flex-container > div {
+  width: 14%;
+  text-align: center;
+  font-size: 1rem;
+}
+.right {
+  position: absolute;
+  top: 45%;
+  right: -1%;
+}
+.left {
+  position: absolute;
+  top: 45%;
+  left: -1%;
+}
+.tooltipRight,
+.tooltipLeft {
+  opacity: 0;
+  transition: opacity 2s;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 600%;
+}
+.tooltipLeft {
+  left: -600%;
+}
+.left:hover .tooltipLeft {
+  opacity: 0.7;
+}
+.tooltipRight {
+  right: -600%;
+}
+.right:hover .tooltipRight {
+  opacity: 0.7;
+}
